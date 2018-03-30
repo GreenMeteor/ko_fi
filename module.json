@@ -1,0 +1,10 @@
+{
+    "id": "ko_fi",
+    "name": "Ko-fi",
+    "description": "Add your Ko-fi button to your HumHub installation.",
+    "keywords": ["ko-fi"],
+    "version": "1.0.0",
+    "humhub": {
+    "minVersion": "1.0"
+    }
+}
