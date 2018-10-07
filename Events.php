@@ -27,8 +27,8 @@ public static function addKofiFrame($event)
         if (Yii::$app->user->isGuest) {
             return;
         }
-        $event->sender->view->registerAssetBundle(Assets::className());
-        $event->sender->addWidget(KofiFrame::className(), [], [
+        $event->sender->view->registerAssetBundle(Assets::class);
+        $event->sender->addWidget(KofiFrame::class, [], [
             'sortOrder' => Setting::Get('timeout', 'ko_fi')
         ]);
     }
