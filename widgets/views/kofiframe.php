@@ -16,7 +16,7 @@ use humhub\models\Setting;
   <div class="panel-body">
 
 <?= Html::beginTag('div') ?>
-<a href='<?= $ko_fiUrl ?>' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#46b798', '<?= $ko_fiUrl ?>');kofiwidget2.draw();</script> 
 <?= Html::endTag('div'); ?>
 </div>
 </div>
