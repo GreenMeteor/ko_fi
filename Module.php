@@ -7,7 +7,6 @@ use yii\helpers\Url;
 
 class Module extends \humhub\components\Module
 {
-
     /**
      * @inheritdoc
      */
@@ -17,6 +16,7 @@ class Module extends \humhub\components\Module
                     '/ko_fi/admin'
         ]);
     }
+
     public function getServerUrl()
     {
         $url = $this->settings->get('serverUrl');
