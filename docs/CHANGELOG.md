@@ -4,6 +4,7 @@
 - Chg: Use ID not URL
 - Chg: Version upgrade
 - Enh: Added `MANUAL.md` & `CHANGELOG.md` files.
+- Chg: Use en-GB not en-US
 
 ### Release v1.0.x (Older)
 - Fix: Removed unused Yii class present
