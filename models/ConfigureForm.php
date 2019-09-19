@@ -3,11 +3,12 @@
 namespace humhub\modules\ko_fi\models;
 
 use Yii;
+use yii\base\Model;
 
 /**
  * ConfigureForm defines the configurable fields.
  */
-class ConfigureForm extends \yii\base\Model
+class ConfigureForm extends Model
 {
 
     public $serverUrl;
@@ -18,7 +19,7 @@ class ConfigureForm extends \yii\base\Model
     public function rules()
     {
         return [
-            ['serverUrl', 'string'],
+            ['serverUrl', 'required'],
         ];
     }
 
@@ -28,7 +29,7 @@ class ConfigureForm extends \yii\base\Model
     public function attributeLabels()
     {
         return [
-            'serverUrl' => 'Ko-fi URL:'
+            'serverUrl' => 'Ko-fi ID:'
         ];
     }
 
@@ -38,7 +39,7 @@ class ConfigureForm extends \yii\base\Model
     public function attributeHints()
     {
         return [
-            'serverUrl' => 'e.g. https://ko-fi.com/{id}'
+            'serverUrl' => 'e.g. https://ko-fi.com/<strong>{id}</strong>'
         ];
     }
 
