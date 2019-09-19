@@ -12,9 +12,7 @@ class Module extends \humhub\components\Module
      */
     public function getConfigUrl()
     {
-        return Url::to([
-                    '/ko_fi/admin'
-        ]);
+        return Url::to(['/ko_fi/admin']);
     }
 
     public function getServerUrl()
@@ -26,4 +24,12 @@ class Module extends \humhub\components\Module
         return $url;
     }
 
+    public function getColor()
+    {
+        $color = $this->settings->get('color');
+        if (empty($color)) {
+            return '#';
+        }
+        return $color;
+    }
 }

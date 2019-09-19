@@ -1,11 +1,10 @@
 {
     "id": "ko_fi",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "name": "Ko-fi",
     "description": "Add your Ko-fi button to your HumHub installation.",
     "humhub": {
-        "minVersion": "1.2",
-	"maxVersion": "1.4"
+        "minVersion": "1.2"
     },
     "keywords": ["ko-fi", "module"],
     "screenshots": ["assets/Screenshot_1.png", "assets/Screenshot_2.png"],
