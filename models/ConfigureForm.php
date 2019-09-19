@@ -12,6 +12,7 @@ class ConfigureForm extends Model
 {
 
     public $serverUrl;
+    public $color;
 
     /**
      * @inheritdoc
@@ -20,6 +21,7 @@ class ConfigureForm extends Model
     {
         return [
             ['serverUrl', 'required'],
+            ['color', 'string']
         ];
     }
 
@@ -29,7 +31,8 @@ class ConfigureForm extends Model
     public function attributeLabels()
     {
         return [
-            'serverUrl' => 'Ko-fi ID:'
+            'serverUrl' => 'Ko-fi ID:',
+            'color' => 'Color:'
         ];
     }
 
@@ -39,13 +42,16 @@ class ConfigureForm extends Model
     public function attributeHints()
     {
         return [
-            'serverUrl' => 'e.g. https://ko-fi.com/<strong>{id}</strong>'
+            'serverUrl' => 'e.g: https://ko-fi.com/<strong>{id}</strong>',
+            'color' => 'e.g: Color Code'
         ];
     }
 
     public function loadSettings()
     {
         $this->serverUrl = Yii::$app->getModule('ko_fi')->settings->get('serverUrl');
+        
+        $this->color = Yii::$app->getModule('ko_fi')->settings->get('color');
 
         return true;
     }
@@ -53,6 +59,8 @@ class ConfigureForm extends Model
     public function save()
     {
         Yii::$app->getModule('ko_fi')->settings->set('serverUrl', $this->serverUrl);
+
+        Yii::$app->getModule('ko_fi')->settings->set('color', $this->color);
 
         return true;
     }
