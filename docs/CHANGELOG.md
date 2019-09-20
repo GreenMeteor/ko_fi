@@ -1,7 +1,6 @@
 # Changelogs
 
 ### Release v1.0.5 (9/19/2019)
-- Chg: Use en-GB not en-US
 - Optimize images
 - Enh: Added getColor to allow custom colored button.
 
