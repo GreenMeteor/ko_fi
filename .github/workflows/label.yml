@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/labeler@v2
       with:
-        repo-token: "kofi_secret"
+        repo-token: "c9e359f9e1cd26ec81c6f398f911c92c5f059396"
