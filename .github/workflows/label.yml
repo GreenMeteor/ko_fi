@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/labeler@v2
       with:
-        repo-token: "c9e359f9e1cd26ec81c6f398f911c92c5f059396"
+        repo-token: "humhub_ko_fi"
