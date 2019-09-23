@@ -1,10 +1,12 @@
 # Changelogs
 
-### Release v1.0.5 (9/19/2019)
-- Optimize images
-- Enh: Added getColor to allow custom colored button.
+### Release v1.0.6 (9/23/2019)
+- Fix: Add missing color field
+- Fix: Missing path in Module.php
 
 ### Release v1.0.x (Older)
+- Optimize images
+- Enh: Added getColor to allow custom colored button.
 - Chg: Use ID not URL
 - Chg: Version upgrade
 - Enh: Added `MANUAL.md` & `CHANGELOG.md` files.
