@@ -4,19 +4,20 @@ use yii\helpers\Url;
 use humhub\libs\Html;
 use humhub\models\Setting;
 use humhub\widgets\PanelMenu;
+use humhub\modules\ko_fi\assets\Assets;
 
-\humhub\modules\ko_fi\Assets::register($this);
+Assets::register($this);
 ?>
 
-<div class="panel panel-default panel-ko_fi" id="panel-ko_fi">
-    <?= PanelMenu::widget(['id' => 'panel-ko_fi']); ?>
+<div class="panel panel-default ko_fi-snippet" id="ko_fi-snippet">
+    <?= PanelMenu::widget(['id' => 'ko_fi-snippet']); ?>
   <div class="panel-heading">
-    <?= '<strong>Ko-fi</strong>' ?>
+    <p><strong><?= $text; ?></strong></p>
   </div>
   <div class="panel-body">
 
 <?= Html::beginTag('div') ?>
-<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '<?= $color ?>', '<?= $ko_fiUrl ?>');kofiwidget2.draw();</script> 
+<a href='<?= $ko_fiUrl ?>' target='_blank'><img height='36' style='border:0px;height:36px;' src='<?= $color ?>' border='0' alt='Buy us a coffee.' /></a>
 <?= Html::endTag('div'); ?>
 </div>
 </div>
