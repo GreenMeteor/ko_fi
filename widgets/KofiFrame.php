@@ -20,10 +20,12 @@ class KofiFrame extends Widget
      */
     public function run()
     {
+        $text = Yii::$app->getModule('ko_fi')->getText() . '';
+
         $url = Yii::$app->getModule('ko_fi')->getServerUrl() . '/';
 
-        $color = Yii::$app->getModule('ko_fi')->getColor() . '';
+        $color = Yii::$app->getModule('ko_fi')->getColor() . '/cdn/';
 
-        return $this->render('kofiframe', ['ko_fiUrl' => $url,'color' => $color]);
+        return $this->render('kofiframe', ['text' => $text, 'ko_fiUrl' => $url, 'color' => $color]);
     }
 }
