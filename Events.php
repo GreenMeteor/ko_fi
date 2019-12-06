@@ -4,13 +4,13 @@ namespace humhub\modules\ko_fi;
 
 use Yii;
 use yii\helpers\Url;
-use humhub\modules\ko_fi\widgets\KofiFrame;
+use yii\base\BaseObject;
 use humhub\models\Setting;
 
-class Events extends \yii\base\BaseObject
+class Events extends BaseObject
 {
 
-    public static function onAdminMenuInit(\yii\base\Event $event)
+    public static function onAdminMenuInit($event)
     {
         $event->sender->addItem([
             'label' => 'Ko-fi Settings',
@@ -22,13 +22,10 @@ class Events extends \yii\base\BaseObject
         ]);
     }
 
-public static function addKofiFrame($event)
+    public static function addKofiFrame($event)
     {
-        if (Yii::$app->user->isGuest) {
-            return;
-        }
-        $event->sender->view->registerAssetBundle(Assets::class);
-        $event->sender->addWidget(KofiFrame::class, [], [
+        $event->sender->view->registerAssetBundle(assets\Assets::class);
+        $event->sender->addWidget(widgets\KofiFrame::class, [], [
             'sortOrder' => Setting::Get('timeout', 'ko_fi')
         ]);
     }
