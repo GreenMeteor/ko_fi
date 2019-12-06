@@ -2,35 +2,20 @@
 
 namespace humhub\modules\ko_fi;
 
+use humhub\modules\ko_fi\Events;
+use humhub\modules\ko_fi\Module;
+use humhub\modules\admin\widgets\AdminMenu;
+use humhub\modules\dashboard\widgets\Sidebar;
+use humhub\modules\space\widgets\Sidebar as Spacebar;
+
 return [
     'id' => 'ko_fi',
-    'class' => 'humhub\modules\ko_fi\Module',
+    'class' => Module::class,
     'namespace' => 'humhub\modules\ko_fi',
     'events' => [
-        [
-            'class' => \humhub\modules\dashboard\widgets\Sidebar::class,
-            'event' => \humhub\modules\dashboard\widgets\Sidebar::EVENT_INIT,
-            'callback' => [
-                'humhub\modules\ko_fi\Events',
-                'addKofiFrame'
-            ]
-        ],
-        [
-            'class' => \humhub\modules\space\widgets\Sidebar::class,
-            'event' => \humhub\modules\space\widgets\Sidebar::EVENT_INIT,
-            'callback' => [
-                'humhub\modules\ko_fi\Events',
-                'addKofiFrame'
-            ]
-        ],
-        [
-            'class' => \humhub\modules\admin\widgets\AdminMenu::class,
-            'event' => \humhub\modules\admin\widgets\AdminMenu::EVENT_INIT,
-            'callback' => [
-                'humhub\modules\ko_fi\Events',
-                'onAdminMenuInit'
-            ]
-        ]
+        ['class' => Sidebar::class, 'event' => Sidebar::EVENT_INIT, 'callback' => [Events::class, 'addKofiFrame']],
+        ['class' => Spacebar::class, 'event' => Spacebar::EVENT_INIT, 'callback' => [Events::class, 'addKofiFrame']],
+        ['class' => AdminMenu::class, 'event' => AdminMenu::EVENT_INIT, 'callback' => [Events::class, 'onAdminMenuInit']]
     ]
 ];
 ?>
