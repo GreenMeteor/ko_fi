@@ -17,7 +17,7 @@ Assets::register($this);
   <div class="panel-body">
 
 <?= Html::beginTag('div') ?>
-<a href='<?= $ko_fiUrl ?>' target='_blank'><img height='36' style='border:0px;height:36px;' src='<?= $color ?>' border='0' alt='Buy us a coffee.' /></a>
+<a href='<?= $ko_fiUrl; ?>' target='_blank'><img height='36' style='border:0px;height:36px;' src='<?= $color; ?>' border='0' alt='Buy us a coffee.' /></a>
 <?= Html::endTag('div'); ?>
 </div>
 </div>
