@@ -33,7 +33,7 @@ class ConfigureForm extends Model
     public function attributeLabels()
     {
         return [
-            'tetx' => 'Text:',
+            'text' => 'Text:',
             'serverUrl' => 'Ko-fi ID:',
             'color' => 'Color:'
         ];
@@ -45,7 +45,7 @@ class ConfigureForm extends Model
     public function attributeHints()
     {
         return [
-            'tetx' => 'Text',
+            'text' => 'Text',
             'serverUrl' => 'e.g: https://ko-fi.com/<strong>{id}</strong>',
             'color' => 'e.g: https://az743702.vo.msecnd.net/cdn/kofi{number}.png?v=2',
         ];
