@@ -12,7 +12,7 @@ Assets::register($this);
 <div class="panel panel-default ko_fi-snippet" id="ko_fi-snippet">
     <?= PanelMenu::widget(['id' => 'ko_fi-snippet']); ?>
   <div class="panel-heading">
-    <p><strong><?= $text; ?></strong></p>
+    <p><?= $text; ?></p>
   </div>
   <div class="panel-body">
 
