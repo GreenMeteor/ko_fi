@@ -16,6 +16,11 @@ class ConfigureForm extends Model
     public $color;
 
     /**
+     * Sort the order of the widget
+     */
+    public $sortOrder;
+
+    /**
      * @inheritdoc
      */
     public function rules()
@@ -23,7 +28,8 @@ class ConfigureForm extends Model
         return [
             ['text', 'required'],
             ['serverUrl', 'required'],
-            ['color', 'required']
+            ['color', 'required'],
+            ['sortOrder', 'string']
         ];
     }
 
@@ -59,6 +65,8 @@ class ConfigureForm extends Model
         
         $this->color = Yii::$app->getModule('ko_fi')->settings->get('color');
 
+        $this->sortOrder = Yii::$app->getModule('ko_fi')->settings->get('sortOrder');
+
         return true;
     }
 
@@ -69,6 +77,8 @@ class ConfigureForm extends Model
         Yii::$app->getModule('ko_fi')->settings->set('serverUrl', $this->serverUrl);
 
         Yii::$app->getModule('ko_fi')->settings->set('color', $this->color);
+
+        Yii::$app->getModule('ko_fi')->settings->set('sortOrder', $this->sortOrder);
 
         return true;
     }
