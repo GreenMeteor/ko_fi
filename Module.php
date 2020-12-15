@@ -43,4 +43,13 @@ class Module extends \humhub\components\Module
         }
         return $text;
     }
+
+    public function getOrder()
+    {
+        $sortOrder = $this->settings->get('sortOrder');
+        if (empty($sortOrder)) {
+            return '100';
+        }
+        return $sortOrder;
+    }
 }
