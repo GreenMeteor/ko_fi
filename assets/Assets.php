@@ -11,10 +11,6 @@ class Assets extends AssetBundle
 
     public $url = 'https://ko-fi.com/widgets';
 
-    public $publishOptions = [
-        'forceCopy' => 'false'
-    ];
-
     /**
      * Register CSS and JS file based on version.
      * @param \yii\web\View $view the view that the asset files are to be registered with.
