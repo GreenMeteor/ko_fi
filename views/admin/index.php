@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 <div class="panel panel-default">
 
-    <div class="panel-heading"><?= Yii::t('KofiModule.base', '<strong>Ko-fi</strong> module configuration'); ?></div>
+    <div class="panel-heading"><?= Yii::t('base', '<strong>Ko-fi</strong> module configuration'); ?></div>
 
     <div class="panel-body">
 
@@ -21,7 +21,7 @@ use yii\helpers\Html;
         </div>
 
         <div class="form-group">
-            <?= Html::submitButton(Yii::t('KofiModule.base', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => '']); ?>
+            <?= Html::submitButton(Yii::t('base', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => '']); ?>
         </div>
 
         <?php ActiveForm::end(); ?>
