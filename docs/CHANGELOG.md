@@ -1,5 +1,12 @@
 # Changelogs
 
+### Release v1.0.7 (TBA)
+- Fix: Translation error
+- Enh: sortOrder configurations
+- Enh: Add AdminMenu permission restrictions
+- Enh: Add getOrder
+- Enh: Module Styling
+
 ### Release v1.0.6 (9/23/2019)
 - Fix: Add missing color field
 - Fix: Missing path in Module.php
