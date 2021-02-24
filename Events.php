@@ -32,6 +32,6 @@ class Events extends BaseObject
 
     public static function addKofiFrame($event)
     {
-        $event->sender->addWidget(widgets\KofiFrame::class, [], ['sortOrder' => Yii::$app->getModule('ko_fi')->settings->get('sortOrder')]);
+        $event->sender->addWidget(widgets\KofiFrame::class, []);
     }
 }
