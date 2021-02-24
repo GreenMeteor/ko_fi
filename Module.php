@@ -30,7 +30,7 @@ class Module extends \humhub\components\Module
     {
         $color = $this->settings->get('color');
         if (empty($color)) {
-            return 'https://az743702.vo.msecnd.net';
+            return '';
         }
         return $color;
     }
