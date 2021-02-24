@@ -3,8 +3,6 @@
 namespace humhub\modules\ko_fi\widgets;
 
 use Yii;
-use yii\helpers\Url;
-use humhub\libs\Html;
 use humhub\components\Widget;
 
 /**
