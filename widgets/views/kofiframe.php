@@ -8,7 +8,6 @@ $this->registerJsFile($urlJs);
 
 <div class="panel panel-default ko_fi-snippet" id="ko_fi-snippet">
     <?= Html::beginTag('div') ?>
-    <!--<a href='<?= $ko_fiUrl ?>' target='_blank'><img height='36' style='border:0px;height:36px;' src='<?= $color ?>' border='0' alt='Buy us a coffee.' /></a>-->
     <script src='<?= $urlJs ?>'></script>
     <script>
     kofiWidgetOverlay.draw('<?= $ko_fiUrl; ?>', {
