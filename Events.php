@@ -6,6 +6,7 @@ use Yii;
 use yii\helpers\Url;
 use yii\base\BaseObject;
 use humhub\modules\ui\menu\MenuLink;
+use humhub\modules\ui\icon\widgets\Icon;
 use humhub\modules\admin\widgets\AdminMenu;
 use humhub\modules\admin\permissions\ManageModules;
 
@@ -24,9 +25,10 @@ class Events extends BaseObject
         $menu->addEntry(new MenuLink([
             'label' => Yii::t('base', 'Ko-fi Settings'),
             'url' => Url::toRoute('/ko_fi/admin/index'),
-            'icon' => '<i class="fa fa-coffee"></i>',
+            'icon' => Icon::get('coffee'),
             'isActive' => Yii::$app->controller->module && Yii::$app->controller->module->id == 'ko_fi' && Yii::$app->controller->id == 'admin',
-            'sortOrder' => 650
+            'sortOrder' => 650,
+            'isVisible' => true,
         ]));
     }
 
