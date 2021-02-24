@@ -1,6 +1,11 @@
 # Changelogs
 
-### Release v1.0.7 (TBA)
+### Release v1.0.8 (2/24/2021)
+- Enh: use Icon::get()
+- Chg: Removed unused code
+- Chg: sortOrder no longer used
+
+### Release v1.0.7 (12/5/2019)
 - Fix: Translation error
 - Enh: sortOrder configurations
 - Enh: Add AdminMenu permission restrictions
